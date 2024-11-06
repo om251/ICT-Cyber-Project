@@ -1,0 +1,335 @@
+:root {
+    --charcoal: #232323;
+    --dark-blue: #0a1f44;
+    --neon-blue: #00ffff;
+    --white: #ffffff;
+    --gray: #888888;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--charcoal);
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.8)), url('hero-background.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: var(--neon-blue);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--neon-blue);
+    color: var(--dark-blue);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--white);
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-attachment: fixed;
+    background-image: url('about-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#about h2 {
+    color: var(--neon-blue);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.infographics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.infographics img {
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.infographics img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: 15px auto;
+    text-align: center;
+    color: #ccc;
+    font-size: 20px;
+    width: 80%;
+}
+
+/* Add Animation */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.3s;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@-webkit-keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.5)}
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--neon-blue);
+}
+
+/* Infographic image styles */
+.infographics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.infographics img {
+    width: 30%;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    cursor: pointer; /* Indicate that images are clickable */
+}
+
+.infographics img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+    .infographics img {
+        width: 80%;
+    }
+}
+
+
+/* Self-Assessment Tool */
+#assessment {
+    padding: 60px 20px;
+}
+
+#assessment h2 {
+    color: var(--neon-blue);
+}
+
+.assessment-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quiz .question {
+    margin-bottom: 30px;
+}
+
+.slider {
+    width: 100%;
+}
+
+#score-display {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+#score {
+    font-size: 2em;
+    color: var(--neon-blue);
+}
+
+/* Contact Form */
+#contact {
+    padding: 60px 20px;
+    background-color: var(--dark-blue);
+}
+
+#contact h2 {
+    color: var(--neon-blue);
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--neon-blue);
+    color: var(--dark-blue);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: var(--white);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .infographics {
+        flex-direction: column;
+    }
+    .infographics img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Article styling */
+#article {
+    padding: 60px 20px;
+    background-color: var(--charcoal);
+}
+
+#article h2 {
+    text-align: center;
+    color: var(--neon-blue);
+    margin-bottom: 40px;
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: var(--white);
+}
+
+.article-content p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+    .article-content {
+        padding: 0 10px;
+        font-size: 1em;
+    }
+}

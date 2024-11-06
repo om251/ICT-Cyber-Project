@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Wellness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Embrace Cyber Wellness</h1>
+            <p>Your journey to a healthier digital life starts here.</p>
+            <a href="#assessment" class="cta-button">Start Now</a>
+        </div>
+    </section>
+
+    <section id="article">
+        <h2>Understanding the Importance of Cyber Wellness</h2>
+        <div class="article-content">
+            <p>
+                In an increasingly digital world, the concept of cyber wellness has never been more critical. Cyber wellness refers to the positive well-being of internet users and the healthy cyber culture in the online community. It encompasses understanding the online risks, practicing safe and responsible behaviors, and fostering respect for oneself and others in the digital space.
+            </p>
+            <p>
+                The internet offers limitless opportunities for learning, communication, and entertainment. However, it also presents challenges such as cyberbullying, misinformation, and privacy breaches. As users of this vast digital landscape, it is our responsibility to navigate it safely and ethically. This involves being aware of the content we consume and share, protecting our personal information, and respecting the rights and dignity of others.
+            </p>
+            <p>
+                Practicing good cyber wellness means being a responsible digital citizen. This includes thinking critically about the information we encounter online, verifying sources before sharing, and understanding the impact of our digital footprint. It also means standing up against cyberbullying, supporting others in the online community, and promoting a positive and inclusive environment.
+            </p>
+            <p>
+                By embracing cyber wellness principles, we not only protect ourselves but also contribute to a safer and more respectful online world. Let's commit to educating ourselves and others about responsible online behavior, so we can all enjoy the benefits of the internet while minimizing its risks.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Cyber Wellness -->
+    <section id="about">
+        <h2>About Cyber Wellness</h2>
+        <div class="about-content">
+            <p>Cyber wellness refers to the positive well-being of internet users and the healthy cyber culture for the internet community. It involves understanding online risks, practicing safe habits, and being responsible online.</p>
+            <div class="infographics">
+                <img src="infographic1.png" alt="Infographic 1">
+                <img src="infographic2.png" alt="Infographic 2">
+                <img src="infographic3.png" alt="Infographic 3">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal structure -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image" src="">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Self-Assessment Tool -->
+    <section id="assessment">
+        <h2>Self-Assessment Tool</h2>
+        <div class="assessment-content">
+            <p>Evaluate your online habits and understand your cyber wellness score.</p>
+            <div class="quiz">
+                <div class="question">
+                    <p>How often do you check social media per day?</p>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="q1">
+                    <span class="slider-value" id="q1-value">5</span>
+                </div>
+                <div class="question">
+                    <p>Do you feel anxious without internet access?</p>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="q2">
+                    <span class="slider-value" id="q2-value">5</span>
+                </div>
+                <button id="calculate" class="cta-button">Calculate Score</button>
+                <div id="score-display">
+                    <p>Your Cyber Wellness Score:</p>
+                    <span id="score">--</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Link to the JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
